@@ -13,13 +13,6 @@ namespace mt
 		m_align = 0;
 	}
 
-	Text::Text(const std::wstring& str)
-	{
-		m_str = str;
-		m_col = 0x000F;
-		m_align = 0;
-	}
-
 	Text::Text(const std::wstring& str, std::wstring m_fontType, int align)
 	{
 		m_str = str;

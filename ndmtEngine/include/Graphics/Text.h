@@ -23,7 +23,6 @@ namespace mt
 
 	public:
 		Text();
-		Text(const std::wstring& str);
 		Text(const std::wstring& str, std::wstring m_fontType = L"default", int align = 0);
 		Text(const Text& text);
 		~Text();
