@@ -48,6 +48,7 @@ namespace mt
 		bool Load(std::wstring linkFile);
 
 		const Sprite& operator=(const Sprite& spr);
+
 	protected:
 		void draw(ndmtEngine* target) const;
 		void Create(int w, int h);

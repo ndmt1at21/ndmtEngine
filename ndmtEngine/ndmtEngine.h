@@ -31,7 +31,7 @@ namespace mt
 		int constructConsole(short w, short h, short fontw, short fonth, std::wstring appName = L"Default");
 		void drawPoint(int x, int y, short ch = 0x2588, short col = 0x000F);
 		void draw(const Drawable* object);
-		void clear();
+		void clear(short col = 0x000F);
 		void start();
 
 	private:

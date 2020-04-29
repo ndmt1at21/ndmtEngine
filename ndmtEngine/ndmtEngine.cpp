@@ -92,12 +92,12 @@ namespace mt
 		object->draw(this);
 	}
 
-	void ndmtEngine::clear()
+	void ndmtEngine::clear(short col)
 	{
 		for (int i = 0; i < m_nScreenWidth * m_nScreenHeight; i++)
 		{
 			m_buffer[i].Char.UnicodeChar = PIXEL_SOLID;
-			m_buffer[i].Attributes = FG_BLACK;
+			m_buffer[i].Attributes = col;
 		}
 	}
 

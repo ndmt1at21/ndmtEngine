@@ -158,6 +158,7 @@
     <ClInclude Include="CommonFunc.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="include\Graphics\Button.h" />
     <ClInclude Include="include\Graphics\Circle.h" />
     <ClInclude Include="include\Graphics\Color.h" />
     <ClInclude Include="include\Graphics\Drawable.h" />
@@ -188,6 +189,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Graphics\Button.cpp" />
     <ClCompile Include="src\Graphics\Circle.cpp" />
     <ClCompile Include="src\Graphics\Line.cpp" />
     <ClCompile Include="src\Graphics\Rectangle.cpp" />
