@@ -26,10 +26,11 @@ namespace mt
 		Button(Drawable* drawObj);
 		~Button();
 
-		void setColor(const mt::Vector2i& colorSrc_Change);
+		void setFillAtrribute(const mt::Vector2i& gly_color);
+		void setText(const Text& text, const Color& col);
 		void setPosition(const mt::Vector2i& position);
-		bool isClicked();
-		bool isInside();
+		bool isClicked() const;
+		bool isInside() const;
 
 	protected:
 		void draw(ndmtEngine* target) const;

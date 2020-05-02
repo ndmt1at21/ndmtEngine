@@ -23,18 +23,35 @@ namespace mt
 	
 	}
 
-	void Button::setColor(const mt::Vector2i& colorSrc_Change)
+	void Button::setFillAtrribute(const mt::Vector2i& gly_color)
 	{
-		m_color = colorSrc_Change;
+		if (m_shape) m_shape->setFillAttribute(gly_color);
+	}
+
+	void Button::setText(const Text& text, const Color& col)
+	{
+		m_text = text;
+		m_text.setColor(col);
 	}
 
 	void Button::setPosition(const mt::Vector2i& position)
 	{
-		if (m_shape)	m_shape->setPosition(position);
-		else if (m_spr) m_spr->setPosition(position);
+		RectInt rect;
+		if (m_shape)
+		{
+			m_shape->setPosition(position);
+			rect = m_shape->getGlobalBound();
+		}
+		else if (m_spr)
+		{
+			m_spr->setPosition(position);
+			rect = m_shape->getGlobalBound();
+		}
+		 
+		m_text.setPosition(mt::Vector2i((rect.left + rect.width) / 2, (rect.top + rect.height) / 2));
 	}
 
-	bool Button::isClicked()
+	bool Button::isClicked() const
 	{
 		mt::Event event;
 		if (isInside() && Event::isKeyPressed(mt::MC_LEFT))
@@ -43,7 +60,7 @@ namespace mt
 		return false;
 	}
 
-	bool Button::isInside()
+	bool Button::isInside() const
 	{
 		mt::RectInt globalBound;
 		mt::Event event;
@@ -67,5 +84,7 @@ namespace mt
 	{
 		if (m_shape)	target->draw(m_shape);
 		else if (m_spr) target->draw(m_spr);
+
+		target->draw(&m_text);
 	}
 }
