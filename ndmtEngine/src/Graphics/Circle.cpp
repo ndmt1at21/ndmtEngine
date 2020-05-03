@@ -114,11 +114,11 @@ namespace mt
 			Line l4(Vector2i(-y + xc, -x + yc), Vector2i(y + xc, -x + yc));
 			Line l5(Vector2i(-x + xc, -y + yc), Vector2i(x + xc, -y + yc));
 
-			l1.setFillAttribute(Vector2i(PIXEL_SOLID, FG_WHITE));
-			l2.setFillAttribute(Vector2i(PIXEL_SOLID, FG_WHITE));
-			l3.setFillAttribute(Vector2i(PIXEL_SOLID, FG_WHITE));
-			l4.setFillAttribute(Vector2i(PIXEL_SOLID, FG_WHITE));
-			l5.setFillAttribute(Vector2i(PIXEL_SOLID, FG_WHITE));
+			l1.setFillAttribute(Vector2i(m_fillAttribute.x, m_fillAttribute.y));
+			l2.setFillAttribute(Vector2i(m_fillAttribute.x, m_fillAttribute.y));
+			l3.setFillAttribute(Vector2i(m_fillAttribute.x, m_fillAttribute.y));
+			l4.setFillAttribute(Vector2i(m_fillAttribute.x, m_fillAttribute.y));
+			l5.setFillAttribute(Vector2i(m_fillAttribute.x, m_fillAttribute.y));
 
 			if (fi < 0)
 			{

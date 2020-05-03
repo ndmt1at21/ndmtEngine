@@ -14,7 +14,7 @@ namespace mt
 { 
 	class ndmtEngine;
 
-	class Button :public Drawable
+	class NDMTENGINE_API Button :public Drawable
 	{
 	private:
 		Sprite* m_spr;
@@ -27,7 +27,7 @@ namespace mt
 		~Button();
 
 		void setFillAtrribute(const mt::Vector2i& gly_color);
-		void setText(const Text& text, const Color& col);
+		void setText(const Text& text, short col);
 		void setPosition(const mt::Vector2i& position);
 		bool isClicked() const;
 		bool isInside() const;

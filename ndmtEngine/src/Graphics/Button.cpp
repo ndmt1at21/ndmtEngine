@@ -28,7 +28,7 @@ namespace mt
 		if (m_shape) m_shape->setFillAttribute(gly_color);
 	}
 
-	void Button::setText(const Text& text, const Color& col)
+	void Button::setText(const Text& text, short col)
 	{
 		m_text = text;
 		m_text.setColor(col);
@@ -45,7 +45,7 @@ namespace mt
 		else if (m_spr)
 		{
 			m_spr->setPosition(position);
-			rect = m_shape->getGlobalBound();
+			rect = m_spr->getGlobalBound();
 		}
 		 
 		m_text.setPosition(mt::Vector2i((rect.left + rect.width) / 2, (rect.top + rect.height) / 2));
