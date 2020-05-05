@@ -18,17 +18,11 @@ namespace mt
 	{
 	private:
 		Sprite* m_spr;
-		Shape* m_shape;
-		mt::Text m_text;
-		mt::Vector2i m_color;
 
 	public:
-		Button(Drawable* drawObj);
+		Button(Sprite* spr);
 		~Button();
 
-		void setFillAtrribute(const mt::Vector2i& gly_color);
-		void setText(const Text& text, short col);
-		void setPosition(const mt::Vector2i& position);
 		bool isClicked() const;
 		bool isInside() const;
 
