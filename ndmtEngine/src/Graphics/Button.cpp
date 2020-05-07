@@ -32,7 +32,7 @@ namespace mt
 		
 		mt::Vector2i mousePos = Event::getMousePosition();
 		if (mousePos.x > globalBound.left && mousePos.x < globalBound.left + globalBound.width
-			|| mousePos.y > globalBound.top && mousePos.y < globalBound.top + globalBound.height)
+			&& mousePos.y > globalBound.top && mousePos.y < globalBound.top + globalBound.height)
 		{
 			return true;
 		}
